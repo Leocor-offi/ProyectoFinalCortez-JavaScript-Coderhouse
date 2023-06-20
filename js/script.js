@@ -294,7 +294,32 @@ async function swalBorrarTodoElcart() {
     }
 }
 
+
+// Función que simula una llamada asíncrona a un servidor para obtener datos de cruceros, ya uqe no encontre ninguna api de cruceros y queria dejarla funcional a la api de exchange
+function obtenerDatosDeCruceros() {
+    return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const datos = [];
+        if (datos) {
+        resolve(datos);
+        } else {
+        reject("Error al obtener los datos de cruceros");
+        }
+    }, 2000);
+    });
+}
+
+obtenerDatosDeCruceros()
+    .then((datos) => {
+    console.log("Datos de cruceros:", datos);
+    })
+    .catch((error) => {
+    console.error("Error al obtener los datos de cruceros:", error);
+    });
+
+
 crucerosPush();
 cruceros = cruceros.sort((a, b) => (a.nombre > b.nombre) ? 1 : ((b.nombre > a.nombre) ? -1 : 0))
 renderizarcruceros(cruceros);
 totalcruceroscart();
+

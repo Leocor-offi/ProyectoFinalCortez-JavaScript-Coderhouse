@@ -13,3 +13,22 @@ export default async function convertFiatToFiat (amount, fromCurrency, toCurrenc
     }
 };
 //cotizacion a dolar oficial
+
+/*
+async function convertFiatToFiat(amount, fromCurrency, toCurrency) {
+    const url = `https://openexchangerates.org/api/latest.json?app_id=${API_KEY}`;
+    const method = 'POST';
+    const data = {
+    amount: amount,
+    fromCurrency: fromCurrency,
+    toCurrency: toCurrency,
+    };
+
+    try {
+    const response = await ajaxRequest(url, method, data);
+    return response.rate;
+    } catch (error) {
+    console.log(error);
+    }
+}
+*/
